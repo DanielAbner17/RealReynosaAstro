@@ -68,7 +68,7 @@ export const stores: Store[] = [
   {
     title: 'Telcel',
     imageName: 'logo-telcel.png',
-    alt: 'Logo Telcel (Centro de Atencion a Clientes)',
+    alt: 'Logo Telcel',
     horario: `<strong>De Lunes a Domingo:</strong> 9:00 a.m. - 8:00 p.m.`,
     categoria: 'Electrónicos y telefonia',
   },
@@ -96,7 +96,7 @@ export const stores: Store[] = [
   {
     title: 'AT&T',
     imageName: 'logo-att.png',
-    alt: 'Logo AT&T (Centro de Atencion a Clientes)',
+    alt: 'Logo AT&T',
     horario: `<strong>Lunes a Viernes:</strong> 9:00 a.m. - 8:00 p.m. <br/><strong>Sábado:</strong> 10:00 a.m. - 8:00 p.m. <br/><strong>Domingo:</strong> 10:00 a.m. - 6:00 p.m.`,
     categoria: 'Electrónicos y telefonia',
   },
@@ -173,7 +173,7 @@ export const stores: Store[] = [
   {
     title: "McDonald's",
     imageName: 'logo-mcdonalds.png',
-    alt: "Logo McDonald's (En Fooud Court)",
+    alt: "Logo McDonald's",
     horario: `<strong>De Lunes a Domingo:</strong> 10:00 a.m. - 9:00 p.m.`,
     categoria: 'Comidas',
   },
