@@ -2,12 +2,7 @@
 import Layout from 'src/layouts/Layout.astro';
 import PageHero from '@components/common/PageHero.astro';
 import ImageGrid from '@components/common/ImagesGrid.astro';
-
-const images = await Astro.glob(
-  '/src/images/events/*.{jpeg,jpg,png,gif,webp}'
-).then((files) => {
-  return files.map((file) => file.default);
-});
+import { images } from 'src/data/images/events'; // Importa las rutas generadas dinámicamente
 ---
 
 <Layout title='Eventos'>

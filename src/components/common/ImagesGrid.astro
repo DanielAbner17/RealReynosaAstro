@@ -1,27 +1,27 @@
 ---
-import { Image } from 'astro:assets';
-
 interface Props {
   class?: string;
   enableThreeColumns?: boolean;
-  images: any;
+  images: any[];
 }
 
 const { class: className, enableThreeColumns, images } = Astro.props;
+
+// Determina la cantidad de columnas según la propiedad `enableThreeColumns`
 const gridCols = enableThreeColumns
   ? 'grid-cols-2 md:grid-cols-3'
   : 'grid-cols-2 md:grid-cols-2';
 ---
 
-<div class={`gap-4 grid ${gridCols} ${className}`}>
+<div class={`gap-4 grid ${gridCols} ${className || ''}`}>
   {
-    images.map((image: any) => (
-      <Image
+    images.map((image: string, index: number) => (
+      <img
         src={image}
-        alt=''
-        width={800}
-        height={800}
-        class='w-full rounded-md aspect-square object-cover object-center shadow-xl '
+        alt={`Imagen ${index + 1}`}
+        class='w-full rounded-md aspect-square object-cover object-center shadow-xl'
+        loading='lazy'
+        decoding='async'
       />
     ))
   }

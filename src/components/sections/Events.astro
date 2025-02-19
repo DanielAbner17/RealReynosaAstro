@@ -4,13 +4,8 @@ import CarouselEvents from '@components/common/CarouselEvents.astro';
 import LeftElement from '@components/common/LeftElement.astro';
 import TitleDivider from '@components/common/TitleDivider.astro';
 
-/* importing all images from the events folder */
-
-const images = await Astro.glob(
-  '/src/images/events/*.{jpeg,jpg,png,gif,webp}'
-).then((files) => {
-  return files.map((file) => file.default);
-});
+/* Importa las imágenes generadas dinámicamente */
+import { images } from 'src/data/images/events'; // Importar rutas desde el archivo generado
 
 interface Props {
   class?: string;
@@ -18,6 +13,7 @@ interface Props {
   buttonText?: string;
   buttonLink?: string;
 }
+
 const { title = 'Eventos', buttonLink, buttonText } = Astro.props;
 ---
 
